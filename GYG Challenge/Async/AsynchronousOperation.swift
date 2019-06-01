@@ -6,7 +6,10 @@ class AsynchronousOperation: Operation {
     return true
   }
   
-  private let synchronizationQueue = DispatchQueue(label: "Sync queue", attributes: .concurrent)
+  private let synchronizationQueue = DispatchQueue(
+    label: "\(type(of: self)) state synchronization queue",
+    attributes: .concurrent
+  )
   
   final override var isReady: Bool {
     return state == .ready && super.isReady
@@ -42,13 +45,14 @@ class AsynchronousOperation: Operation {
     case finished
   }
   
-  @objc private var _state: State = .ready
+  @objc dynamic private var _state: State = .ready
+  
   private var state: State {
     get {
       return synchronizationQueue.sync { self._state }
     }
     set {
-      synchronizationQueue.async { self.state = newValue }
+      synchronizationQueue.async { self._state = newValue }
     }
   }
   
