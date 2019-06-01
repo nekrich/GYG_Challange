@@ -25,7 +25,9 @@ class DataTaskOperation<Model>: AsynchronousOperation {
     
     let completionHandler: (Result<Model, Error>) -> Void = { [weak self] in
       self?.result = $0
-      completion($0)
+      if !(self?.isCancelled ?? true) {
+        completion($0)
+      }
       self?.finish()
     }
     
