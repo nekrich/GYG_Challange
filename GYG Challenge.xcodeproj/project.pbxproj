@@ -12,6 +12,9 @@
 		68A8A99522A26A0B00334F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A8A99322A26A0B00334F0F /* Main.storyboard */; };
 		68A8A99722A26A0C00334F0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A8A99622A26A0C00334F0F /* Assets.xcassets */; };
 		68A8A99A22A26A0C00334F0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A8A99822A26A0C00334F0F /* LaunchScreen.storyboard */; };
+		68A8A9A322A26B0D00334F0F /* ReviewComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9A222A26B0D00334F0F /* ReviewComment.swift */; };
+		68A8A9A522A286B200334F0F /* TravelerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9A422A286B200334F0F /* TravelerType.swift */; };
+		68A8A9A722A286C400334F0F /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9A622A286C400334F0F /* Reviewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		68A8A99622A26A0C00334F0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68A8A99922A26A0C00334F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68A8A99B22A26A0C00334F0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68A8A9A222A26B0D00334F0F /* ReviewComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewComment.swift; sourceTree = "<group>"; };
+		68A8A9A422A286B200334F0F /* TravelerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelerType.swift; sourceTree = "<group>"; };
+		68A8A9A622A286C400334F0F /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		68A8A98E22A26A0B00334F0F /* GYG Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				68A8A9A122A26AE700334F0F /* Models */,
 				68A8A98F22A26A0B00334F0F /* AppDelegate.swift */,
 				68A8A99122A26A0B00334F0F /* ViewController.swift */,
 				68A8A99322A26A0B00334F0F /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				68A8A99B22A26A0C00334F0F /* Info.plist */,
 			);
 			path = "GYG Challenge";
+			sourceTree = "<group>";
+		};
+		68A8A9A122A26AE700334F0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				68A8A9A222A26B0D00334F0F /* ReviewComment.swift */,
+				68A8A9A422A286B200334F0F /* TravelerType.swift */,
+				68A8A9A622A286C400334F0F /* Reviewer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A8A9A722A286C400334F0F /* Reviewer.swift in Sources */,
+				68A8A9A522A286B200334F0F /* TravelerType.swift in Sources */,
 				68A8A99222A26A0B00334F0F /* ViewController.swift in Sources */,
 				68A8A99022A26A0B00334F0F /* AppDelegate.swift in Sources */,
+				68A8A9A322A26B0D00334F0F /* ReviewComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
