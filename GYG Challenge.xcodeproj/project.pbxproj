@@ -17,6 +17,8 @@
 		68A8A9A722A286C400334F0F /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9A622A286C400334F0F /* Reviewer.swift */; };
 		68A8A9AC22A28B2A00334F0F /* ReviewsCommentsRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9AB22A28B2A00334F0F /* ReviewsCommentsRequestBuilder.swift */; };
 		68A8A9AE22A28B8100334F0F /* ReviewsCommentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9AD22A28B8100334F0F /* ReviewsCommentsResponse.swift */; };
+		68A8A9B122A2944500334F0F /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9B022A2944500334F0F /* AsynchronousOperation.swift */; };
+		68A8A9B322A2B05300334F0F /* DataTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9B222A2B05300334F0F /* DataTaskOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		68A8A9A622A286C400334F0F /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		68A8A9AB22A28B2A00334F0F /* ReviewsCommentsRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsRequestBuilder.swift; sourceTree = "<group>"; };
 		68A8A9AD22A28B8100334F0F /* ReviewsCommentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsResponse.swift; sourceTree = "<group>"; };
+		68A8A9B022A2944500334F0F /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		68A8A9B222A2B05300334F0F /* DataTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		68A8A98E22A26A0B00334F0F /* GYG Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				68A8A9AF22A293EA00334F0F /* Async */,
 				68A8A9AA22A28B2300334F0F /* API */,
 				68A8A9A122A26AE700334F0F /* Models */,
 				68A8A98F22A26A0B00334F0F /* AppDelegate.swift */,
@@ -93,6 +98,15 @@
 				68A8A9AD22A28B8100334F0F /* ReviewsCommentsResponse.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		68A8A9AF22A293EA00334F0F /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				68A8A9B022A2944500334F0F /* AsynchronousOperation.swift */,
+				68A8A9B222A2B05300334F0F /* DataTaskOperation.swift */,
+			);
+			path = Async;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,8 @@
 				68A8A9A522A286B200334F0F /* TravelerType.swift in Sources */,
 				68A8A9AE22A28B8100334F0F /* ReviewsCommentsResponse.swift in Sources */,
 				68A8A99222A26A0B00334F0F /* ViewController.swift in Sources */,
+				68A8A9B322A2B05300334F0F /* DataTaskOperation.swift in Sources */,
+				68A8A9B122A2944500334F0F /* AsynchronousOperation.swift in Sources */,
 				68A8A99022A26A0B00334F0F /* AppDelegate.swift in Sources */,
 				68A8A9A322A26B0D00334F0F /* ReviewComment.swift in Sources */,
 			);
