@@ -21,6 +21,7 @@
 		68A8A9B322A2B05300334F0F /* DataTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9B222A2B05300334F0F /* DataTaskOperation.swift */; };
 		68A8A9B922A2DA3900334F0F /* Result+sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9B822A2DA3900334F0F /* Result+sugar.swift */; };
 		68A8A9BB22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */; };
+		68A8A9BE22A2DAED00334F0F /* ReviewsCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		68A8A9B222A2B05300334F0F /* DataTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskOperation.swift; sourceTree = "<group>"; };
 		68A8A9B822A2DA3900334F0F /* Result+sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+sugar.swift"; sourceTree = "<group>"; };
 		68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewsCommentsResponse+decoding.swift"; sourceTree = "<group>"; };
+		68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		68A8A98E22A26A0B00334F0F /* GYG Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				68A8A9BC22A2DAD100334F0F /* DataSources */,
 				68A8A9B622A2DA1900334F0F /* Extensions */,
 				68A8A9AF22A293EA00334F0F /* Async */,
 				68A8A9AA22A28B2300334F0F /* API */,
@@ -129,6 +132,14 @@
 				68A8A9B822A2DA3900334F0F /* Result+sugar.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		68A8A9BC22A2DAD100334F0F /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				68A8A9AC22A28B2A00334F0F /* ReviewsCommentsRequestBuilder.swift in Sources */,
 				68A8A9A522A286B200334F0F /* TravelerType.swift in Sources */,
 				68A8A9AE22A28B8100334F0F /* ReviewsCommentsResponse.swift in Sources */,
+				68A8A9BE22A2DAED00334F0F /* ReviewsCommentsDataSource.swift in Sources */,
 				68A8A99222A26A0B00334F0F /* ViewController.swift in Sources */,
 				68A8A9BB22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift in Sources */,
 				68A8A9B322A2B05300334F0F /* DataTaskOperation.swift in Sources */,
