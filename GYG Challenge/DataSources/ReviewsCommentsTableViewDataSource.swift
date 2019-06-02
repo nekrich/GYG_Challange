@@ -10,7 +10,7 @@ class ReviewsCommentsTableViewDataSource: NSObject {
       return dataSource.delegate
     }
     set {
-      dataSource.delegate = delegate
+      dataSource.delegate = newValue
     }
   }
   
