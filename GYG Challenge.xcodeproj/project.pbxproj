@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67A3EA16ABCA31399CF1F21D /* Pods_GYG_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9112F24F60D76B1D8F061336 /* Pods_GYG_Challenge.framework */; };
 		68A8A99022A26A0B00334F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A98F22A26A0B00334F0F /* AppDelegate.swift */; };
 		68A8A99222A26A0B00334F0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A99122A26A0B00334F0F /* ViewController.swift */; };
 		68A8A99522A26A0B00334F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A8A99322A26A0B00334F0F /* Main.storyboard */; };
@@ -44,6 +45,9 @@
 		68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewsCommentsResponse+decoding.swift"; sourceTree = "<group>"; };
 		68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsDataSource.swift; sourceTree = "<group>"; };
 		68A8A9BF22A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsTableViewDataSource.swift; sourceTree = "<group>"; };
+		891D6A1BA5B3B1045BD9D05A /* Pods-GYG Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYG Challenge.debug.xcconfig"; path = "Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		9112F24F60D76B1D8F061336 /* Pods_GYG_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GYG_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA1DCAD2D2ABBFC7FAFD754 /* Pods-GYG Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYG Challenge.release.xcconfig"; path = "Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A3EA16ABCA31399CF1F21D /* Pods_GYG_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 			children = (
 				68A8A98E22A26A0B00334F0F /* GYG Challenge */,
 				68A8A98D22A26A0B00334F0F /* Products */,
+				745613E4C1438C7E107F38BC /* Pods */,
+				7F2C03B3AF107469982CBD24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +152,24 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		745613E4C1438C7E107F38BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				891D6A1BA5B3B1045BD9D05A /* Pods-GYG Challenge.debug.xcconfig */,
+				9EA1DCAD2D2ABBFC7FAFD754 /* Pods-GYG Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F2C03B3AF107469982CBD24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9112F24F60D76B1D8F061336 /* Pods_GYG_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68A8A99E22A26A0C00334F0F /* Build configuration list for PBXNativeTarget "GYG Challenge" */;
 			buildPhases = (
+				D1935EB33F2E0E7463E7C9D9 /* [CP] Check Pods Manifest.lock */,
 				68A8A98822A26A0B00334F0F /* Sources */,
 				68A8A98922A26A0B00334F0F /* Frameworks */,
 				68A8A98A22A26A0B00334F0F /* Resources */,
+				3C6A4273DAEB10A084A375AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +237,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C6A4273DAEB10A084A375AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1935EB33F2E0E7463E7C9D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GYG Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68A8A98822A26A0B00334F0F /* Sources */ = {
@@ -372,6 +441,7 @@
 		};
 		68A8A99F22A26A0C00334F0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 891D6A1BA5B3B1045BD9D05A /* Pods-GYG Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -391,6 +461,7 @@
 		};
 		68A8A9A022A26A0C00334F0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA1DCAD2D2ABBFC7FAFD754 /* Pods-GYG Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
