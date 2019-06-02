@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		68A8A9BB22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */; };
 		68A8A9BE22A2DAED00334F0F /* ReviewsCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */; };
 		68A8A9C022A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BF22A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift */; };
+		68A8A9F422A3CB2700334F0F /* ReviewCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9F322A3CB2700334F0F /* ReviewCommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		891D6A1BA5B3B1045BD9D05A /* Pods-GYG Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYG Challenge.debug.xcconfig"; path = "Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		9112F24F60D76B1D8F061336 /* Pods_GYG_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GYG_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA1DCAD2D2ABBFC7FAFD754 /* Pods-GYG Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYG Challenge.release.xcconfig"; path = "Target Support Files/Pods-GYG Challenge/Pods-GYG Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		68A8A9F322A3CB2700334F0F /* ReviewCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				68A8A9A122A26AE700334F0F /* Models */,
 				68A8A98F22A26A0B00334F0F /* AppDelegate.swift */,
 				68A8A99122A26A0B00334F0F /* ViewController.swift */,
+				68A8A9F322A3CB2700334F0F /* ReviewCommentTableViewCell.swift */,
 				68A8A99322A26A0B00334F0F /* Main.storyboard */,
 				68A8A99622A26A0C00334F0F /* Assets.xcassets */,
 				68A8A99822A26A0C00334F0F /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 			files = (
 				68A8A9A722A286C400334F0F /* Reviewer.swift in Sources */,
 				68A8A9AC22A28B2A00334F0F /* ReviewsCommentsRequestBuilder.swift in Sources */,
+				68A8A9F422A3CB2700334F0F /* ReviewCommentTableViewCell.swift in Sources */,
 				68A8A9A522A286B200334F0F /* TravelerType.swift in Sources */,
 				68A8A9AE22A28B8100334F0F /* ReviewsCommentsResponse.swift in Sources */,
 				68A8A9BE22A2DAED00334F0F /* ReviewsCommentsDataSource.swift in Sources */,
