@@ -22,6 +22,7 @@
 		68A8A9B922A2DA3900334F0F /* Result+sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9B822A2DA3900334F0F /* Result+sugar.swift */; };
 		68A8A9BB22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */; };
 		68A8A9BE22A2DAED00334F0F /* ReviewsCommentsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */; };
+		68A8A9C022A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8A9BF22A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		68A8A9B822A2DA3900334F0F /* Result+sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+sugar.swift"; sourceTree = "<group>"; };
 		68A8A9BA22A2DA7600334F0F /* ReviewsCommentsResponse+decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewsCommentsResponse+decoding.swift"; sourceTree = "<group>"; };
 		68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsDataSource.swift; sourceTree = "<group>"; };
+		68A8A9BF22A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCommentsTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				68A8A9BD22A2DAED00334F0F /* ReviewsCommentsDataSource.swift */,
+				68A8A9BF22A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				68A8A9B122A2944500334F0F /* AsynchronousOperation.swift in Sources */,
 				68A8A9B922A2DA3900334F0F /* Result+sugar.swift in Sources */,
 				68A8A99022A26A0B00334F0F /* AppDelegate.swift in Sources */,
+				68A8A9C022A3B11000334F0F /* ReviewsCommentsTableViewDataSource.swift in Sources */,
 				68A8A9A322A26B0D00334F0F /* ReviewComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
