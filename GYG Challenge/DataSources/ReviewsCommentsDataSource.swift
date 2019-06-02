@@ -2,9 +2,9 @@ import Foundation
 
 protocol ReviewsCommentsDataSourceDelegate: AnyObject {
   
-  func reviewsCommentsDataSourceDidUpdateReviewsList(
+  func reviewsCommentsDataSource(
     _ dataSource: ReviewsCommentsDataSource,
-    count: Int,
+    didLoad countOfNewLines: Int,
     isEndReached: Bool
   )
 }
@@ -53,17 +53,11 @@ class ReviewsCommentsDataSource {
   init(requestBuilder: ReviewsCommentsRequestBuilder) {
     self.requestBuilder = requestBuilder
     self.options = requestBuilder.options
-    
-    loadNextPageIfNeeded()
   }
   
   private var isRequestInProgress: Bool = false
   
-  internal private(set) var isEndReached: Bool = false {
-    didSet {
-      delegateUpdates()
-    }
-  }
+  internal private(set) var isEndReached: Bool = false
   
   func loadNextPageIfNeeded() {
     operationQueue.addOperation { [weak self] in
@@ -135,12 +129,12 @@ class ReviewsCommentsDataSource {
       totalReviewsCount = response.totalReviewsCount
     }
     
-    reviewComments[pageIndex] = response.reviews
-    
     // Looks like we'll never get promised in `totalReviewsCount` comments count.
     // An error `Could not find data for thre request tour` occurs after #723. 🤷‍♂️
     isEndReached = response.reviews.count < requestBuilder.countPerPage
-      || count >= (totalReviewsCount ?? 0)
+      || (count + response.reviews.count) >= (totalReviewsCount ?? 0)
+    
+    reviewComments[pageIndex] = response.reviews
     
     if isEndReached {
       totalReviewsCount = count
@@ -148,19 +142,21 @@ class ReviewsCommentsDataSource {
   }
   
   private func updateCount() {
+    let previousCount = count
     count = reviewComments.reduce(into: 0) { $0 += $1.value.count }
-    delegateUpdates()
+    delegateUpdates(countOfNewLines: count - previousCount)
   }
   
-  private func delegateUpdates() {
+  private func delegateUpdates(countOfNewLines: Int) {
+    let isEndReached = self.isEndReached || count == totalReviewsCount
     DispatchQueue.main.async { [weak self] in
       guard let self = self else {
         return
       }
-      self.delegate?.reviewsCommentsDataSourceDidUpdateReviewsList(
+      self.delegate?.reviewsCommentsDataSource(
         self,
-        count: self.count,
-        isEndReached: self.isEndReached
+        didLoad: countOfNewLines,
+        isEndReached: isEndReached
       )
     }
   }
@@ -171,7 +167,9 @@ extension ReviewsCommentsDataSource {
   subscript(position: Int) -> ReviewComment {
     get {
       let countPerPage = requestBuilder.countPerPage
-      return reviewComments[position / countPerPage, default: []][position % countPerPage]
+      let page = position / countPerPage
+      let indexAtPage = position % countPerPage
+      return reviewComments[page, default: []][indexAtPage]
     }
   }
 }
