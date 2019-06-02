@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SDWebImage
 
 class ReviewsCommentsTableViewDataSource: NSObject {
   
@@ -32,6 +33,21 @@ class ReviewsCommentsTableViewDataSource: NSObject {
   }
 }
 
+extension ReviewsCommentsTableViewDataSource {
+  
+  subscript(position: Int) -> ReviewComment {
+    get {
+      return dataSource[position]
+    }
+  }
+  
+  subscript(indexPath: IndexPath) -> ReviewComment {
+    get {
+      return self[indexPath.row]
+    }
+  }
+}
+
 extension ReviewsCommentsTableViewDataSource: UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,6 +69,33 @@ extension ReviewsCommentsTableViewDataSource: UITableViewDataSource {
     )
     -> UITableViewCell
   {
-    return UITableViewCell()
+    guard !(indexPath.row == dataSource.count && !dataSource.isEndReached) else {
+      return tableView.dequeueReusableCell(withIdentifier: "Loader")!
+    }
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewComment")!
+    if let cell = cell as? ReviewCommentTableViewCell {
+      cell.configure(with: self[indexPath])
+    }
+    return cell
+  }
+}
+
+extension ReviewsCommentsTableViewDataSource: UITableViewDataSourcePrefetching {
+  
+  func tableView(
+    _ tableView: UITableView,
+    prefetchRowsAt _indexPaths: [IndexPath]
+    )
+  {
+    let indexPaths: [IndexPath]
+    if dataSource.isEndReached {
+      indexPaths = _indexPaths
+    } else {
+      indexPaths = _indexPaths.filter { $0.row != dataSource.count }
+    }
+    
+    SDWebImagePrefetcher.shared.prefetchURLs(
+      indexPaths.compactMap { self[$0].reviwer.profilePhotoURL }
+    )
   }
 }
