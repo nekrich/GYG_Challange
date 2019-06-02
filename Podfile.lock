@@ -1,0 +1,22 @@
+PODS:
+  - Cosmos (19.0.3)
+  - SDWebImage (5.0.4):
+    - SDWebImage/Core (= 5.0.4)
+  - SDWebImage/Core (5.0.4)
+
+DEPENDENCIES:
+  - Cosmos
+  - SDWebImage
+
+SPEC REPOS:
+  https://cdn.jsdelivr.net/cocoa/:
+    - Cosmos
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
+  SDWebImage: c739016e4bdf0a4a1f9a04b5e0385395ad63a282
+
+PODFILE CHECKSUM: b6c1f85f78170b69ed2f69733565f581791a460f
+
+COCOAPODS: 1.7.1
